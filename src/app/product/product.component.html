@@ -1,0 +1,17 @@
+<div  class="cart-icon">
+    <button (click)="navigateToCart()" class="cart-button">
+        <mat-icon class="cart-icon">shopping_cart</mat-icon>
+      </button>    
+    <span *ngIf="cartCount > 0" class="notification-badge">{{ cartCount }}</span>
+  </div>
+
+  <div class="product-container">
+      <div class="product-card" *ngFor="let product of products">
+        <img [src]="product.image" alt="{{ product.title }}">
+        <h3 class="title">{{ product.title }}</h3>
+        <p class="description">{{ product.description }}</p>
+        <h2 class="price">{{product.price}} Bs</h2>
+        <button mat-raised-button  (click)="addToCart(product)">Agregar al carrito</button>
+      </div>
+    </div>
+    

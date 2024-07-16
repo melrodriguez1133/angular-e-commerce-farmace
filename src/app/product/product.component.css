@@ -1,0 +1,148 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+   /* justify-content: space-around; /* Distribuye los elementos con espacio alrededor */
+    padding: 20px;
+    background-color: #121212; /* Fondo oscuro */
+    color: white; /* Color de texto para tema oscuro */
+  }
+  
+  .product-card {
+    background-color: #1f1f1f; /* Color de fondo ligeramente más claro */
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    width: calc(30% - 20px); /* Ancho de tarjeta para 3 tarjetas por fila con margen */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    font-size: 0.9em;
+    margin: 10px 0;
+  }
+
+  .product-image {
+    max-width: 100%; /* Asegura que la imagen se ajuste dentro del contenedor */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente */
+    border-radius: 8px;
+  }
+  
+  .title {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-align: center; /* Centra el título */
+  }
+  
+  .description {
+    font-size: 0.9em;
+    text-align: left; /* Alinea la descripción a la izquierda */
+    margin-left: 10px; /* Añade un pequeño margen izquierdo */
+  }
+  
+  .price {
+    font-size: 1.1em;
+    text-align: left; /* Alinea el precio a la izquierda */
+    margin-left: 10px; /* Añade un pequeño margen izquierdo */
+    color: #ffc107; /* Color amarillo para el precio */
+  }
+
+    
+  .add-to-cart-button {
+    background-color: #28a745; /* Botón verde */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #218838;
+  }
+  
+  .cart-icon {
+    position:fixed;
+    top: 87%; /* Puedes ajustar esto según tus necesidades */
+    right: 3%; /* Puedes ajustar esto según tus necesidades */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5; /* Color de fondo opcional */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+  }
+  
+  .cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cart-icon mat-icon {
+    font-size: 40px; /* Tamaño del ícono */
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 10px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  @media (max-width: 1024px) {
+    .product-card {
+      width: calc(45% - 20px); /* Two cards per row on smaller screens */
+    }
+    .cart-icon {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .cart-icon mat-icon {
+        font-size: 30px; /* Tamaño del ícono */
+      }
+  }
+  
+  @media (max-width: 768px) {
+    .product-card {
+      width: calc(100% - 20px); /* One card per row on smaller screens */
+    }
+    .cart-icon {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .cart-icon mat-icon {
+        font-size: 30px; /* Tamaño del ícono */
+      }
+  }
+  

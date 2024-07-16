@@ -1,0 +1,14 @@
+<nav class="navbar">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbox">
+        <mat-icon>menu</mat-icon>
+    </label>
+    <label class="logo">
+        E-commerce
+    </label>
+    <ul>
+        <li><a (click)="navigateTo('/home')">Inicio</a></li>
+        <li><a (click)="navigateTo('/productos')">Productos</a></li>
+        <li><a (click)="navigateTo('/contacto')">Contacto</a></li>
+    </ul>
+</nav>
