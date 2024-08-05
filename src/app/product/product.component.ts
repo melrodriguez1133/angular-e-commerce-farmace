@@ -33,12 +33,14 @@ export class ProductComponent implements OnInit {
     this.router.navigate(['/carrito']);
   }
 
+  // Se ejecuta al inicializar el componente, obtiene los productos y actualiza el conteo de productos en el carrito.
   ngOnInit(): void {
     console.log('get products');
     this.products = this.productsService.getProducts();
     this.cartCount = this.cartService.getProducts().length; 
   }
 
+  // Agrega un producto al carrito y actualiza el conteo de productos en el carrito.
   addToCart(product: Product): void {
     console.log('Método addToCart llamado con el producto:', product);
     this.cartService.addProduct(product);
